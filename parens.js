@@ -32,11 +32,6 @@ function test(parensCheckFunction) {
         "[][][]{}(){[]}({})": true
     };
 
-	// var testCases = {
-	// 	"()(((())))": true,
-	// 	"())))(": false,
-	// 	")(": false
-	// };
 	var allTestsPass = true;
 	for(parenString in testCases) {
 		var expected = testCases[parenString];
