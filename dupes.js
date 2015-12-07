@@ -17,3 +17,8 @@ function removeDupes(str){
 function removeDupes(str){
 	console.log(str.replace(/(.)(?=.*\1)/gi, ""));
 }
+
+
+
+//http://stackoverflow.com/questions/19301806/regex-remove-repeated-characters-from-a-string-by-javascript
+//http://stackoverflow.com/questions/9655164/regex-case-sensitive
