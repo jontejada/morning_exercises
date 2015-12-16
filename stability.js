@@ -132,3 +132,45 @@ var companies = [
 		]
 	}
 ];
+
+
+
+function permutator(inputArr) {
+  var results = [];
+  function permute(arr, memo) {
+    var cur, memo = memo || [];
+    for (var j = 0; j < arr.length; j++) {
+      cur = arr.splice(j, 1);
+      if (arr.length === 0) {
+        results.push(memo.concat(cur));
+      }
+      permute(arr.slice(), memo.concat(cur));
+      arr.splice(j, 0, cur[0]);
+    }
+    return results;
+  }
+  return permute(inputArr);
+}
+
+var companyPermutations = permutator(companies);
+var levelsOfStability = [];
+companyPermutations.forEach(function(elem,n,arr) {
+	var localStability = 0;
+	for (var i = 0 ; i< elem.length - 1; i++) {
+		localStability += developers[i].preferences.indexOf(elem[i].name);
+		localStability += elem[i].preferences.indexOf(developers[i].name);
+	}
+	levelsOfStability.push(localStability);
+});
+
+// console.log(companyPermutations.length);
+// console.log(levelsOfStability.length);
+var lowest = levelsOfStability.indexOf(Math.min.apply(Math, levelsOfStability));
+console.log(companyPermutations[lowest]);
+
+//result:
+// Liz at AirBnb
+// Tyl at Facebook
+// Cho at Uber
+// Zub at Pivotal
+// Ros at Lyft
