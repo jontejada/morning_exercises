@@ -6,10 +6,6 @@ var obj1 = {
 	"NaN":"something"
 };
 
-
-
-
-
 function addKeys(inputObj) {
 	var keyArr = Object.keys(inputObj);
 	var total = keyArr.reduce(function(a,b){
@@ -27,13 +23,12 @@ function addKeys(inputObj) {
 }
 addKeys(obj1);
 
-
 function addKeys2(inputObj) {
 	//second method here
-	
+	return Object.keys(obj).reduce(function(prev,current) {
+		return prev = Number(current) + prev || prev;
+	},0)	
 }
-
-
 
 
 
