@@ -7,7 +7,8 @@ function sumArguments(){
 	// }
 	
 	//slice and reduce:
-	var args = Array.prototype.slice.call(arguments);
+	// var args = Array.prototype.slice.call(arguments);
+	var args = [].slice.call(arguments);
 	var total = args.reduce(function(a,b){
 		return a + b;
 	});
