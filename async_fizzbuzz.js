@@ -2,7 +2,7 @@
 // which prints "fizz". Extend this code to achieve the tasks 
 // listed below.
 
-setTimeout(fizz, 300);
+// setTimeout(fizz, 300);
 
 function fizz() {
 	console.log('fizz');
@@ -14,7 +14,7 @@ function buzz() {
 
 // After 500ms print buzz
 
-setTimeout(buzz,500);
+// setTimeout(buzz,500);
 
 // Count every 100ms and print the number of ms (100, 200, 300)
 
@@ -43,6 +43,7 @@ function fb(){
 	console.log('------ ' + round * 100 + 'ms');
 	if (round % 15 === 0) {
 		console.log('fizzbuzz');
+		clearInterval(intervalID);
 	} else if (round % 5 === 0) {
 		console.log('buzz');
 	} else if (round % 3 === 0) {
@@ -50,8 +51,4 @@ function fb(){
 	} else {
 		console.log(round * 100);
 	}
-	if (round === 15) {
-		clearInterval(intervalID);
-	}
-	// console.log('end of round ' + round);
 }
