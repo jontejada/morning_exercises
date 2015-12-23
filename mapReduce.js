@@ -30,8 +30,6 @@ function swap(inputArr) {
 
 console.log(swap(input));
 
-
-
 // Sample output should be: [{'a': 1}, {'b': 2}, {'c': 3}, {'d', 4}]
 
 // Take your swapped output once it matches the above comment
@@ -60,5 +58,4 @@ function red(inputArr){
 }
 
 console.log(red(concat(swap(input))));
-
 
