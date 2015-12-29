@@ -57,5 +57,6 @@ function red(inputArr){
 	});
 }
 
+//nested functions
 console.log(red(concat(swap(input))));
 
