@@ -24,7 +24,7 @@ function addKeys(inputObj) {
 addKeys(obj1);
 
 function addKeys2(inputObj) {
-	//second method here
+	//second method here with simpliified reduce function
 	return Object.keys(obj).reduce(function(prev,current) {
 		return prev = Number(current) + prev || prev;
 	},0)	
