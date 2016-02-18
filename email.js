@@ -15,3 +15,15 @@ function email(input) {
 console.log(email(a));
 console.log(email(b));
 console.log(email(c));
+
+
+
+//not working
+function reducing(input) {
+	var sArr = input.split(" ");
+	sArr.reduce(function(newSubject,curVal,i,a){
+
+	});
+
+	return ;
+}
