@@ -18,8 +18,8 @@ function u(arr) {
 			odds.push(arr[i]);
 		}
 	}
-	if (odds.length === 1) return odds[0];
-	if (evens.length === 1) return evens[0];
-
+	// if (odds.length === 1) return odds[0];
+	// if (evens.length === 1) return evens[0];
+	return odds.length === 1 ? odds[0] : evens[0];
 }
 
