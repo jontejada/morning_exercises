@@ -2,11 +2,8 @@
 // For example:
 var arr1 = [2, 4, 0, 100, 4, 11, 2602, 36];
 console.log(u(arr1),11);
-// Should return: 11
-
 var arr2 = [160, 3, 1719, 19, 11, 13, -21];
 console.log(u(arr2),160);
-// Should return: 160
 
 function u(arr) {
 	var odds = [];
@@ -18,8 +15,6 @@ function u(arr) {
 			odds.push(arr[i]);
 		}
 	}
-	// if (odds.length === 1) return odds[0];
-	// if (evens.length === 1) return evens[0];
 	return odds.length === 1 ? odds[0] : evens[0];
 }
 
