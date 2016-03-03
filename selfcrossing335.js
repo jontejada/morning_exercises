@@ -27,7 +27,11 @@ var isSelfCrossing = function(x) {
     return false; //not selfcrossing
 };
 
-
+function step(d){
+	if (d === 'n') {
+		
+	}
+}
 
 //true
 console.log(isSelfCrossing([2, 1, 1, 2]));
