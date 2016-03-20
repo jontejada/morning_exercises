@@ -4,6 +4,7 @@
 
 ##trees, tries, graphs
 
+
 ##stacks, queues
 
 ##heaps
@@ -15,8 +16,19 @@
 #algorithms
 
 ##breadth-first search
+use a queue (FIFO)
 
 ##depth-first search
+use a stack (LIFO)
+
+###pre-order (N)(L)(R)
+
+
+###in-order (L)(N)(R)
+in a search tree, in-order traversal retrieves data in sorted order
+
+###post-order (L)(R)(N)
+
 
 ##binary search
 
