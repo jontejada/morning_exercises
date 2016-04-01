@@ -16,6 +16,43 @@
  * @param {TreeNode} root
  * @return {number}
  */
+var countNodes = function(root) {
+	var depth = getDepth(root);
+	var total = Math.pow(2,depth) - 1;
+	var stack = [];
+	var node;
+	var emptyCount = 0;
+	stack.push([root,1]);
+	while (stack.length) {
+		node = stack.pop();
+		if (node[1] === depth) {
+			break;
+		}
+		if (node[0].left) {
+			stack.push([node[0].left, node[1] + 1]);
+		}
+		if (node[0].right) {
+			stack.push([node[0].left, node[1] + 1]);
+		}
+	}
+};
+
+function getDepth(node) {
+	if (!node) return 0;
+	return getDepth(node.left) + 1;
+}
+// max possible nodes is 2^height - 1
+// subtract from this
+
+
+
+
+
+
+
+
+
+
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -27,19 +64,19 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var count = 0;
-var countNodes = function(root) {
-	recTrav(root);
-	return count;
-};
+// var count = 0;
+// var countNodes = function(root) {
+// 	recTrav(root);
+// 	return count;
+// };
 
-function recTrav(node) {
-	if (node) {
-		count++;
-		recTrav(node.left);
-		recTrav(node.right); 
-	}
-}
+// function recTrav(node) {
+// 	if (node) {
+// 		count++;
+// 		recTrav(node.left);
+// 		recTrav(node.right); 
+// 	}
+// }
 
 // var countNodes = function(root) {
 // 	if (!root) return 0;
