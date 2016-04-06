@@ -17,23 +17,66 @@
  * @return {number}
  */
 var countNodes = function(root) {
-	var depth = getDepth(root);
-	var total = Math.pow(2,depth) - 1;
+	// calculate total height, h, of the tree by recursively traversing the far left edges with calls to the getDepth function
+	var h = getDepth(root);
+	//calcuate the maximum number of nodes in a tree with hight, h. null nodes in the last row will be subtracted from this total 
+	var total = Math.pow(2,h) - 1;
+	//empty stack for tree traversal
 	var stack = [];
+	//variable to hold the current node
 	var node;
-	var emptyCount = 0;
+	// var emptyCount = 0;
+	//setup the traversal by adding root 
 	stack.push([root,1]);
 	while (stack.length) {
 		node = stack.pop();
-		if (node[1] === depth) {
-			break;
+
+		//base case: 2 children and not at depth
+		//base case: 2 children and at depth
+		//base case: left child only (and at depth)
+		//base case: no children and not at depth
+		//base case: no children and at depth
+
+
+
+		// parent base case B: at depth
+		if (h = node[1]) {
+			//base case B1: 2 children
+			if (node[0].left && node[0].right) {
+				//end of search
+			}
+			//base case B2: left child only
+			if (node[0].left && !node[0].right) {
+				//end of search
+			}
+			//base case B3: no children
+			if (!node[0].left) {
+				//keep looking right
+			}
+		//parent base case A: not at depth
+		} else if {
+			//base case A1: 2 children
+			if (node[0].left && node[0].right) {
+				//look at the right child
+			}
+			//base case A2: no children
+			if (!node[0].left) {
+				//
+			}
 		}
-		if (node[0].left) {
-			stack.push([node[0].left, node[1] + 1]);
-		}
-		if (node[0].right) {
-			stack.push([node[0].left, node[1] + 1]);
-		}
+
+
+
+
+		// if (node[1] === h) {
+		// 	break;
+		// }
+		// if (node[0].left) {
+		// 	stack.push([node[0].left, node[1] + 1]);
+		// }
+		// if (node[0].right) {
+		// 	stack.push([node[0].left, node[1] + 1]);
+		// }
 	}
 };
 
@@ -96,4 +139,14 @@ function getDepth(node) {
 // 		}
 // 	}
 // 	return count;
+// };
+
+
+
+//time limit exceded! gah
+// var countNodes = function(root) {
+//     if (!root) {
+//         return 0;
+//     }
+//     return 1 + countNodes(root.left) + countNodes(root.right);
 // };
